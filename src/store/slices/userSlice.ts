@@ -13,6 +13,7 @@ const userSlice = createSlice({
     initialState : initialState,
     reducers : {
         login (state,{payload}){
+            console.log(payload)
             return{
                 ...state,
                 name: payload.name,

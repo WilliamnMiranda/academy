@@ -1,11 +1,13 @@
-import React from 'react'
+import React, {SetStateAction } from 'react'
 import { ContainerLogin, FormLogin ,ContainerInput,ButtonLogin} from './style'
+import { TypeSelectedAccess } from '../../../types/Access'
 
 interface IPropsComponents{
-  status : 'register' | 'login'
+  status : 'register' | 'login',
+  setOption : React.Dispatch<SetStateAction<TypeSelectedAccess>>
 }
 
-const Register = ({ status }:IPropsComponents) => {
+const Register = ({ status,setOption }:IPropsComponents) => {
   return (
       <ContainerLogin status={status}>
         <FormLogin>

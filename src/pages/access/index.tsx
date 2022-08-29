@@ -1,19 +1,19 @@
 import React from 'react'
-import { Container,ContainerOptions } from './style'
+import { Container, ContainerOptions } from './style'
 import Login from './login'
 import Register from './register'
-
-type TypeSelectedAccess = 'register' | 'login';
-
+import { TypeSelectedAccess } from '../../types/Access'
 const Access = () => {
-  const status : TypeSelectedAccess = 'login';
+  const [option,setOption] = React.useState<TypeSelectedAccess>('login')
   return (
-    <Container>
-      <ContainerOptions>
-        <Register status={status} />
-        <Login status={status}/>
-      </ContainerOptions>
-    </Container>
+    <>
+      <Container>
+        <ContainerOptions>
+          <Register status={option} setOption={setOption}/>
+          <Login status={option} setOption={setOption}/>
+        </ContainerOptions>
+      </Container>
+    </>
   )
 }
 

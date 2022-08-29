@@ -19,23 +19,23 @@ const FadeOutAnimation = keyframes`
 `;
 export const ContainerLogin = styled.section`
     display: flex;
+    flex-direction: column;
     width: 400px;
-    height: 500px;
     position: absolute;
     animation: ${({status})=> status === 'login' ? FadeInAnimation : FadeOutAnimation } .5s;
     opacity: ${({status})=> status === 'login' ? 1 : 0};
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 `
-export const FormLogin = styled.div`
+export const FormLogin = styled.form`
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    background-color: white;
-    border-radius: 20px;
-    padding: 20px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    padding: 20px 20px 0px 20px;
     img {
         width: 150px;
         height: 150px;
@@ -83,4 +83,25 @@ export const ButtonLogin = styled.button`
     height: 50px;
     background-color: #4dbce9;
     border-radius: 15px;
+`
+
+export const CreateAccount = styled.p`
+  cursor: pointer;
+  width: 100%;
+  text-align: start;
+  margin-top: 15px;
+  font-size: 0.9em;
+  font-style: italic;
+  padding: 20px;
+  background-color: #fafafa;
+  border-radius: 0px 0px 20px 20px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  button{
+    font-weight: bold;
+    height: 30px;
+    padding: 5px;
+    border: 1px solid rgba(0,0,0,0.1);
+    cursor: pointer;
+  }
 `
