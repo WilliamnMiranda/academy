@@ -13,7 +13,7 @@ const userSlice = createSlice({
     initialState : initialState,
     reducers : {
         login (state,{payload}){
-            console.log(payload)
+           localStorage.setItem('token',payload.token)
             return{
                 ...state,
                 name: payload.name,
@@ -21,10 +21,19 @@ const userSlice = createSlice({
                 token: payload.token,
                 authenticate: true
             }
-        }
+        },
+        authenticate (state,{payload}){
+             return{
+                 ...state,
+                 name: payload.name,
+                 registry: payload.registry,
+                 token: payload.token,
+                 authenticate: true
+             }
+         },
     }
 })
 
-export const { login } = userSlice.actions
+export const { login,authenticate } = userSlice.actions
 
 export default userSlice.reducer

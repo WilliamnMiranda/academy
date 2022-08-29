@@ -14,15 +14,14 @@ interface IPropsComponents {
 }
 
 const Login = ({ status,setOption }: IPropsComponents) => {
-  const { token } : any = useSelector<RootState>((state) => state.user)
   const [email, setEmail] = React.useState<String>('');
   const [password, setPassword] = React.useState<String>('');
+  const user : any = useSelector<RootState>((state) => state.user)
   const dispatch = useDispatch()
   const handleSubmit = async(e:React.FormEvent) =>{
     e.preventDefault()
     const user:IUser = await userServices.login({email,password})
     dispatch(login(user))
-    localStorage.setItem('token',token)
   }
   return (
     <ContainerLogin status={status}>
@@ -36,12 +35,11 @@ const Login = ({ status,setOption }: IPropsComponents) => {
           />
         </ContainerInput>
         <ContainerInput>
-          <label>Password</label>
+          <label>Senha</label>
           <input
             type='password'
             onChange={({ target }) => setPassword(target.value)}
           />
-          {password}
         </ContainerInput>
         <ButtonLogin> LOGIN </ButtonLogin>
       </FormLogin>

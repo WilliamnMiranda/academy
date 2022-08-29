@@ -23,6 +23,7 @@ export const ContainerLogin = styled.section`
     width: 400px;
     position: absolute;
     animation: ${({status})=> status === 'login' ? FadeInAnimation : FadeOutAnimation } .5s;
+    animation-fill-mode: both;
     opacity: ${({status})=> status === 'login' ? 1 : 0};
     background-color: white;
     border-radius: 20px;
