@@ -6,7 +6,7 @@ const userServices = {
        const user : IUser = await (await Api.post('/user/login',{email,password})).data
        return user
     },
-    auth : async (token:String) => {
+    auth : async (token:string) => {
         const userAuthenticate : IUser = await (await Api.post('/user/auth',{token})).data
         console.log(userAuthenticate)
         return userAuthenticate

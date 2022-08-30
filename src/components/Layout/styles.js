@@ -4,9 +4,39 @@ export const ContainerLayout = styled.main`
     display: flex;
     width: 100%;
     height: 100vh;
-    background-color: rgb(245,245,245);
+    background-color:#FDFDFD;
 `
-
+export const Container= styled.section`
+    width: 100%;
+`
 export const Application = styled.section`
-    padding: 20px;
+ width: 100%;
+ padding: 20px;
+`
+export const Header = styled.header`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: white;
+    height: 85px;
+    padding: 0px 20px;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.12)
+`
+export const Tittle= styled.h1`
+    font-size: 1.5em;
+`
+export const Navigation = styled.nav``
+export const List= styled.ul`
+    display: flex;
+    gap:20px;
+`
+export const Item= styled.li`
+    color: rgb(159,159,159);
+    font-size: 1.6em;
+    cursor: pointer;
+    & .MuiAvatar-root{
+        height: 30px;
+        width: 30px;
+    }
 `

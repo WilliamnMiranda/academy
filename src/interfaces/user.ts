@@ -1,11 +1,11 @@
 export interface IUser {
-    name: String,
-    email: String,
+    name: string,
+    email: string,
     registry: Number,
-    token: String
+    token: string
 }
 
 export interface IUserLogin {
-    email: String,
-    password: String
+    email: string,
+    password: string
 }

@@ -1,17 +1,20 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Layout from '../components/Layout'
+import PrivateRoute from '../components/PrivateRoute'
+import Login from '../pages/access'
 import Users from '../pages/users'
 const index = () => {
   return (
     <>
-      <BrowserRouter>
-        <Layout>
           <Routes>
-            <Route path="users" element={<Users />} />
+            <Route path='access' element={<Login />} />
+            <Route path="/" element={
+              <PrivateRoute>
+                <Users />
+              </PrivateRoute>
+            } />
           </Routes>
-        </Layout>
-      </BrowserRouter>
     </>
   )
 }
