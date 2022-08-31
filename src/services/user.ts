@@ -10,7 +10,11 @@ const userServices = {
         const userAuthenticate : IUser = await (await Api.post('/user/auth',{token})).data
         console.log(userAuthenticate)
         return userAuthenticate
-    } 
+    }, 
+    get : async () => {
+        const users: IUser[] = await (await Api.get('/user')).data
+        return users
+    }
 }
 
 export default userServices
