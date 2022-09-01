@@ -1,7 +1,7 @@
 export interface IUser {
     name: string,
     email: string,
-    registry: Number,
+    registry: string,
     token: string
 }
 

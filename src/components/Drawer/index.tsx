@@ -7,14 +7,14 @@ const Drawer = () => {
       <DrawerComponent>
         <div>William Nascimento</div>
         <ListItems>
-          <Link to="users">
+          <Link to="/">
+            <Item>Dashboard</Item>
+          </Link>
+          <Link to="/users">
             <Item>Alunos</Item>
           </Link>
           <Link to="users">
-            <Item>Alunos</Item>
-          </Link>
-          <Link to="users">
-            <Item>Alunos</Item>
+            <Item>Series</Item>
           </Link>
           <Link to="users">
             <Item>Alunos</Item>

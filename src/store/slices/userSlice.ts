@@ -4,7 +4,7 @@ import {IUser} from '../../interfaces/user'
 const initialState : IUser = {
     name: '',
     email: '',
-    registry: 0,
+    registry: '',
     token: ''
 }
 
@@ -36,7 +36,7 @@ const userSlice = createSlice({
             return{
                 ...state,
                 name: '',
-                registry: 0,
+                registry: '',
                 token: '',
                 authenticate: false
             }

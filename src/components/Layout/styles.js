@@ -11,7 +11,7 @@ export const Container= styled.section`
 `
 export const Application = styled.section`
  width: 100%;
- padding: 20px;
+ padding: 0px 20px 20px 20px;
 `
 export const Header = styled.header`
     display: flex;

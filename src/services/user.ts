@@ -7,9 +7,11 @@ const userServices = {
        return user
     },
     auth : async (token:string) => {
-        const userAuthenticate : IUser = await (await Api.post('/user/auth',{token})).data
-        console.log(userAuthenticate)
-        return userAuthenticate
+        try{
+            const userAuthenticate : IUser = await (await Api.post('/user/auth',{token})).data
+            console.log(userAuthenticate)
+            return userAuthenticate
+        }catch(error){localStorage.removeItem('token')}
     }, 
     get : async () => {
         const users: IUser[] = await (await Api.get('/user')).data
