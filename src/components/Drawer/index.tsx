@@ -13,7 +13,7 @@ const Drawer = () => {
           <Link to="/users">
             <Item>Alunos</Item>
           </Link>
-          <Link to="users">
+          <Link to="/records">
             <Item>Series</Item>
           </Link>
           <Link to="users">

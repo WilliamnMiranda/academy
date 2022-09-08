@@ -1,6 +1,10 @@
 import React,{ReactNode} from 'react'
 import { HeaderTable } from './style'
-const Header = (children : ReactNode) => {
+
+interface IProps {
+  children: ReactNode
+}
+const Header = ({ children } : IProps) => {
   return (
     <HeaderTable>
         {children}
@@ -8,4 +12,4 @@ const Header = (children : ReactNode) => {
   )
 }
 
-export default HeaderTable
+export default Header

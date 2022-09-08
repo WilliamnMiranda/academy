@@ -1,0 +1,1 @@
+export const optionsTypeExercises = ['Braco','Perna','Peito','Costas','Triceps','Abdomen','Aerobico']

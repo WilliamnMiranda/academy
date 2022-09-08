@@ -4,10 +4,10 @@ import { BrowserRouter } from "react-router-dom";
 import RoutesApplication from './routes';
 function App() {
   return (
-    <BrowserRouter>
-      <GlobalStyle />
-      <RoutesApplication />
-    </BrowserRouter>
+      <BrowserRouter>
+        <GlobalStyle />
+        <RoutesApplication />
+      </BrowserRouter>
   );
 }
 

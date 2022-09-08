@@ -1,9 +1,9 @@
 import React from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Layout from '../components/Layout'
+import {Route, Routes } from 'react-router-dom'
 import PrivateRoute from '../components/PrivateRoute'
 import Login from '../pages/access'
 import Users from '../pages/users'
+import Records from '../pages/series'
 import Dashboard from '../pages/dashboard'
 const index = () => {
   return (
@@ -18,6 +18,11 @@ const index = () => {
         <Route path="/users" element={
           <PrivateRoute>
             <Users />
+          </PrivateRoute>
+        } />
+         <Route path="/records" element={
+          <PrivateRoute>
+            <Records />
           </PrivateRoute>
         } />
       </Routes>

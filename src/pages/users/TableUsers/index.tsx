@@ -1,6 +1,6 @@
 import { Icon } from '@mui/material'
 import { IUser } from '../../../interfaces/user'
-import { Status } from './style'
+import { Status,Actions } from './style'
 import Table from '../../../components/Table'
 import HeaderTable from '../../../components/HeaderTable'
 import Line from '../../../components/LineTable'
@@ -48,7 +48,7 @@ const TableUsers = ({users}:IProps) => {
                                     <td style={{color: '#4F8DCB'}}>{item.email}</td>
                                     <td>(21) 2059102</td>
                                     <Status>{icon(true)}Active</Status>
-                                    <td>actions</td>
+                                    <td><Actions>actions</Actions></td>
                                 </Line>
                             </>
                         )
