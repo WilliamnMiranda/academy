@@ -1,3 +1,5 @@
+import { IExercise } from "../types/Exercise"
+
 export interface IRecord {
     _id : string,
     user: {
@@ -16,4 +18,9 @@ export interface IRecord {
 export interface IUserLogin {
     email: string,
     password: string
+}
+
+export interface ICreateRecord {
+    userID : string,
+    exercises: IExercise[]
 }

@@ -4,10 +4,18 @@ export interface IUser {
     registry: string,
     token: string,
     status: boolean,
-    id : string
+    _id : string
+    created_at?: string
 }
 
 export interface IUserLogin {
     email: string,
     password: string
+}
+
+export interface IUserCreate {
+    name : string,
+    email: string,
+    password: string,
+    registry: number,
 }

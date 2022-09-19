@@ -5,7 +5,10 @@ import Login from '../pages/access'
 import Users from '../pages/users'
 import Records from '../pages/series'
 import Dashboard from '../pages/dashboard'
-const index = () => {
+import CreateRecord from '../pages/series/create'
+import EditProfile from '../pages/profile'
+import Intructors from '../pages/instructors'
+const RoutesApplication = () => {
   return (
     <>
       <Routes>
@@ -25,9 +28,24 @@ const index = () => {
             <Records />
           </PrivateRoute>
         } />
+        <Route path="/create/record/:id" element={
+          <PrivateRoute>
+            <CreateRecord />
+          </PrivateRoute>
+        } />
+         <Route path="/user/edit/:id" element={
+          <PrivateRoute>
+            <EditProfile />
+          </PrivateRoute>
+        } />
+        <Route path="/instructors" element={
+          <PrivateRoute>
+            <Intructors />
+          </PrivateRoute>
+        } />
       </Routes>
     </>
   )
 }
 
-export default index
+export default RoutesApplication

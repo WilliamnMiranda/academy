@@ -5,13 +5,17 @@ export const ContainerLayout = styled.main`
     width: 100%;
     height: 100vh;
     background-color:#FDFDFD;
+    @media(max-width : 800px){
+        flex-direction: column;
+    }
 `
 export const Container= styled.section`
     width: 100%;
+    position: relative;
 `
 export const Application = styled.section`
  width: 100%;
- padding: 0px 20px 20px 20px;
+ padding: 0px 10px 20px 10px;
 `
 export const Header = styled.header`
     display: flex;

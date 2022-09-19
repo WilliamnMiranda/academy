@@ -9,6 +9,13 @@ export const Actions = styled.div`
     border-radius: 50px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: red;
+    justify-content: space-between;
+    font-size: 1.3em;
+    svg {
+        cursor: pointer;
+    }
+    @media(max-width : 800px){
+        justify-content: flex-start;
+        gap:5px;
+    }
 `

@@ -9,5 +9,15 @@ export const Line = styled.tr`
         color : rgb(125,134,161);
         font-weight: bold;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 1px;
+    }
+    a {
+        color : rgb(125,134,161);
+    }
+    a:visited {
+        color : rgb(125,134,161);
     }
 `

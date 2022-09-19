@@ -4,10 +4,8 @@ import recordServices from '../services/records'
 const useRecords = () => {
 
     const [records,setRecords] = React.useState<IRecord[]>([])
-
     const fetchUsers = async () => {
         const records = await recordServices.get()
-        console.log(records, 'a')
         setRecords([...records])
       }
     
@@ -17,7 +15,7 @@ const useRecords = () => {
       
     return{
         records,
-        setRecords
+        setRecords,
     }
 }
 

@@ -1,9 +1,14 @@
 import Api from '../helpers/api'
+import { ICreateRecord } from '../interfaces/record'
 
 const recordServices = {
     get : async ()=> {
        const records  = await (await Api.get('/record/all')).data.records
        return records
+    },
+    post : async function( record : ICreateRecord){
+      console.log(record)
+      await Api.post('/record/create',record)
     },
     delete : async function(recordId : string){
        try{

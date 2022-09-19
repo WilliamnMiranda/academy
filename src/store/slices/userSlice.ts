@@ -7,7 +7,7 @@ const initialState : IUser = {
     registry: '',
     token: '',
     status: true,
-    id : ''
+    _id : ''
 }
 
 const userSlice = createSlice({

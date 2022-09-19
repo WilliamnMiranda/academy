@@ -1,7 +1,11 @@
 import React,{ReactNode} from 'react'
-import { IModalContext } from '../interfaces/contextModal'
-export const ModalContext = React.createContext<IModalContext | null>(null)
+import { IModalContext } from '../../interfaces/contextModal'
 
+const initalValue = {
+    status : false,
+    setStatus: () => {}
+}
+export const ModalContext = React.createContext<IModalContext>(initalValue)
 
 interface IProps {
     children:ReactNode

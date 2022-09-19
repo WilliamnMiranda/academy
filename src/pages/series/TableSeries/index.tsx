@@ -1,4 +1,4 @@
-import { Icon, Modal } from '@mui/material'
+import moment from 'moment';
 import { Status, Actions } from './style'
 import Table from '../../../components/Table'
 import HeaderTable from '../../../components/HeaderTable'
@@ -7,7 +7,6 @@ import { IRecord } from '../../../interfaces/record'
 import { AiFillEdit, AiFillDelete, AiFillEye } from "react-icons/ai";
 import recordServices from '../../../services/records'
 import useRecord from '../../../hooks/useRecords'
-import ModalComponent from '../../../components/Modal'
 const style = (status: boolean) => {
     return {
         width: '10px',
@@ -33,7 +32,6 @@ const TableUsers = () => {
     }
     return (
         <>
-        <ModalComponent />
             <Table>
                 <HeaderTable>
                     <tr>
@@ -49,7 +47,6 @@ const TableUsers = () => {
                 <tbody>
                     {
                         records.map((item: IRecord) => {
-                            console.log(item)
                             return (
                                 <>
                                     <Line>
@@ -58,7 +55,7 @@ const TableUsers = () => {
                                         <td style={{ color: '#4F8DCB' }}>{item.instructor.name}</td>
                                         <td style={{ textAlign: 'center' }}>{item.exercises.length}</td>
                                         <Status>{icon(true)}Active</Status>
-                                        <td>{item.created_at}</td>
+                                        <td>{moment(item.created_at).format("DD/MM/YYYY")}</td>
                                         <Actions>
                                             <div>
                                                 <span><AiFillEdit /></span>

@@ -2,35 +2,30 @@ import styled from 'styled-components'
 
 export const ContainerModal = styled.div`
     z-index: 100;
-    position: absolute;
+    position: fixed;
     top: 0px;
     left: 0px;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     background-color: rgba(0,0,0,0.3);
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 `
 
 export const Modal = styled.div`
     width: 500px;
-    height: 700px;
+    height: auto;
+    max-height: 100%;
     padding: 10px;
     background-color: white;
 `
-
-export const ContainerFlex= styled.div`
-    margin-top: 10px;
-    display: flex;
-    flex-direction: row;
-    gap:5px;
-`
-
-export const Submit = styled.button`
-    margin-top: 20px;
-    font-weight: 500;
-    background-color: rgba(103,127,254,0.8);
+export const ButtonClose = styled.div`
     width: 100%;
-    height: 50px;
+    padding: 15px 0px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    cursor: pointer;
 `
