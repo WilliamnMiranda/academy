@@ -1,3 +1,4 @@
+import React from 'react'
 import { NavLink } from 'react-router-dom'
 import {
   ContainerDrawer,
@@ -13,15 +14,20 @@ import {
   AiOutlineFileText,
   AiOutlineFire,
   AiOutlineUser,
-  AiOutlineShopping
+  AiOutlineShopping,
+  AiOutlineMenu
 } from 'react-icons/ai'
 const Drawer = () => {
+  React.useEffect(()=>{
+    setStatusDrawer(false)
+  },[window.location.href])
+  const [statusDrawer,setStatusDrawer] = React.useState<boolean>(false);
   return (
     <ContainerDrawer>
       <MenuIcon>
-          -
-        </MenuIcon>
-      <DrawerComponent>
+         <AiOutlineMenu onClick={()=> setStatusDrawer((previusValue)=> !previusValue)} />
+      </MenuIcon>
+      <DrawerComponent status={statusDrawer}>
         <ListItems>
           <Messages>
             <div>

@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const ContainerDrawer = styled.aside`
+    box-sizing: border-box;
     width: 250px;
     background-color: rgb(243,244,255);
     padding: 20px 0px;
@@ -13,7 +14,12 @@ export const DrawerComponent = styled.nav`
     align-items: center;
     flex-direction: column;
     @media(max-width : 900px){
-        display: none;
+        display: ${({status}) => status ? 'block' : 'none' };
+        position: fixed;
+        z-index: 100000;
+        background-color: rgb(243,244,255);
+        width: 100%;
+        height: 100%;
     }
 `
 export const ListItems = styled.ul`
@@ -48,7 +54,7 @@ export const Messages = styled.li`
     justify-content: space-between;
     padding:0px 7px;
     height: 40px;
-    width: 50%;
+    width: 120px;
     font-size: 0.8em;
     font-weight: 500;
     color: white;
@@ -69,6 +75,7 @@ export const Quantity = styled.li`
 `
 export const MenuIcon = styled.div`
     display: none;
+    padding: 0px 20px;
     @media(max-width : 900px){
         display: block;
     }
