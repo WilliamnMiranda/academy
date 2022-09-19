@@ -1,7 +1,12 @@
 import React from 'react'
+import Search from '../../components/Search'
+import TableUsers from './TableInstructors'
 const index = () => {
   return (
-    <div>index</div>
+    <div>
+      <Search />
+      <TableUsers />
+    </div>
   )
 }
 

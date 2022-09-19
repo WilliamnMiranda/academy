@@ -15,11 +15,6 @@ const RoutesApplication = () => {
         <Route path='access' element={<Login />} />
         <Route path="/" element={
           <PrivateRoute>
-            <Dashboard />
-          </PrivateRoute>
-        } />
-        <Route path="/users" element={
-          <PrivateRoute>
             <Users />
           </PrivateRoute>
         } />

@@ -26,13 +26,7 @@ const Drawer = () => {
               New Orders
             </div>
           </Messages>
-          <NavLink to="/">
-            <Item>
-              <AiOutlineLineChart />
-              Dashboard
-            </Item>
-          </NavLink>
-          <NavLink to="/users" >
+          <NavLink to="/" >
             <Item>
               <AiOutlineUsergroupDelete />
               Alunos
