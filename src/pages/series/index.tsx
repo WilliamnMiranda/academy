@@ -3,7 +3,6 @@ import TableSeries from './TableSeries'
 import Search from '../../components/Search'
 const Records = () => {
   const addUser = () => {
-    console.log('a')
   }
   return (
     <div>

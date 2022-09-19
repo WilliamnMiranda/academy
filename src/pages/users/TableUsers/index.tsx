@@ -27,7 +27,6 @@ const TableUsers = () => {
         }
     }
     const { status } = React.useContext(ModalContext);
-    console.log(status)
     const icon = (status: boolean) => {
         if (status) return <span style={style(status)}>on</span>
         return <span style={style(status)}>of</span>

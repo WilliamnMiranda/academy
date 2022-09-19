@@ -15,7 +15,6 @@ interface IProps {
 const List = ({ exercises, userID }: IProps) => {
   const { setStatus } = React.useContext(ModalContext); 
   const navigate = useNavigate()
-  console.log(exercises)
   const createRecord = () => {
     const data:ICreateRecord = {
       userID, 

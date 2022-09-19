@@ -7,14 +7,12 @@ const recordServices = {
        return records
     },
     post : async function( record : ICreateRecord){
-      console.log(record)
       await Api.post('/record/create',record)
     },
     delete : async function(recordId : string){
        try{
-        await await Api.delete(`/record/${recordId}`)
+        await Api.delete(`/record/${recordId}`)
         const newRecords = this.get()
-        console.log(newRecords)
         return newRecords
        }catch(e){
             return 'a'

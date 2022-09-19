@@ -20,7 +20,6 @@ export const InstructorsContext = React.createContext<IPropsContext>(initialValu
 export const InstructorsStorage = ({children}: IProps) =>{
     const [instructors, setInstructors] = React.useState<IInstructors[]>(initialValue.instructors)
     const fetchUsers = async () => {
-        console.log('chamei essa porra')
         const instructors = await instructorServices.get()
         setInstructors([...instructors])
       }

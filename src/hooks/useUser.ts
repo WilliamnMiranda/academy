@@ -32,7 +32,6 @@ const useUser = () => {
   }
 
   const deleteUser = async (userID : string) => {
-    console.log(userID)
     const newUsers = await userServices.delete(userID)
     updateUsers(newUsers)
   }

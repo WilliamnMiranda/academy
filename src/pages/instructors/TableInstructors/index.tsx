@@ -14,7 +14,6 @@ import { IInstructors } from '../../../interfaces/instructor'
 
 const TableUsers = () => {
     const { instructors } = React.useContext(InstructorsContext)
-    console.log(instructors)
     const { deleteUser } = useUser()
     const style = (status: boolean) => {
         return {
@@ -28,7 +27,6 @@ const TableUsers = () => {
         }
     }
     const { status } = React.useContext(ModalContext);
-    console.log(status)
     const icon = (status: boolean) => {
         if (status) return <span style={style(status)}>on</span>
         return <span style={style(status)}>of</span>
