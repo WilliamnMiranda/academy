@@ -6,9 +6,9 @@ import {
   Item,
   Messages,
   Quantity,
+  MenuIcon
 } from './styles.js'
 import {
-  AiOutlineLineChart,
   AiOutlineUsergroupDelete,
   AiOutlineFileText,
   AiOutlineFire,
@@ -18,6 +18,9 @@ import {
 const Drawer = () => {
   return (
     <ContainerDrawer>
+      <MenuIcon>
+          -
+        </MenuIcon>
       <DrawerComponent>
         <ListItems>
           <Messages>

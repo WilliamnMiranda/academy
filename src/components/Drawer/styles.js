@@ -4,7 +4,7 @@ export const ContainerDrawer = styled.aside`
     width: 250px;
     background-color: rgb(243,244,255);
     padding: 20px 0px;
-    @media(max-width : 800px){
+    @media(max-width : 900px){
         width: 100%;
     }
 `
@@ -12,6 +12,9 @@ export const DrawerComponent = styled.nav`
     display: flex;
     align-items: center;
     flex-direction: column;
+    @media(max-width : 900px){
+        display: none;
+    }
 `
 export const ListItems = styled.ul`
     width: 100%;
@@ -63,4 +66,10 @@ export const Quantity = styled.li`
    color: rgb(103,127,254);;
    font-weight: bold;
    border-radius: 2px;
+`
+export const MenuIcon = styled.div`
+    display: none;
+    @media(max-width : 900px){
+        display: block;
+    }
 `
