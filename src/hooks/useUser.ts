@@ -1,4 +1,4 @@
-import { IUser, IUserCreate } from '../interfaces/user';
+import { IUser, IUserEdit } from '../interfaces/user';
 import userServices from '../services/user';
 import React  from 'react';
 import { ModalContext } from '../contexts/modal';
@@ -50,11 +50,11 @@ const useUser = () => {
     setError('*preencha todos os campos')
     return false
   }
-  const edit = async (data : IUserCreate) => {
+  const edit = async (data : IUserEdit) => {
    try{
     const newUsers = await userServices.edit(data)
     setUsers(newUsers)
-    navigate('/users')
+    navigate('/')
    }catch(e){
 
    }

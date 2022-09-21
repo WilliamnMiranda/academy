@@ -3,11 +3,11 @@ import slogan from '../../../images/slogan.jpg'
 import React, {SetStateAction } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../../../types/RootState'
-import userServices from '../../../services/user'
-import { IUser } from '../../../interfaces/user'
 import { login } from '../../../store/slices/userSlice'
 import { TypeSelectedAccess }  from '../../../types/Access'
 import { useNavigate } from 'react-router-dom'
+import instructorServices from '../../../services/instructor'
+import { IInstructors } from '../../../interfaces/instructor'
 
 interface IPropsComponents {
   status: 'register' | 'login'
@@ -22,8 +22,8 @@ const Login = ({ status,setOption }: IPropsComponents) => {
   const dispatch = useDispatch()
   const handleSubmit = async(e:React.FormEvent) =>{
     e.preventDefault()
-    const user:IUser = await userServices.login({email,password})
-    dispatch(login(user))
+    const instructor:IInstructors = await instructorServices.login({email,password})
+    dispatch(login(instructor))
     navigate('/')
   }
   return (

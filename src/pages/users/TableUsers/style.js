@@ -9,7 +9,7 @@ export const Actions = styled.div`
     border-radius: 50px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 5px;
     font-size: 1.3em;
     svg {
         cursor: pointer;

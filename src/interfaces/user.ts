@@ -19,3 +19,10 @@ export interface IUserCreate {
     password: string,
     registry: number,
 }
+
+export interface IUserEdit{ 
+    name : string,
+    email: string,
+    id: string | undefined,
+    registry: number,
+}

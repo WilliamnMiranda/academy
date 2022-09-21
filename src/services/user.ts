@@ -1,5 +1,5 @@
 import Api from '../helpers/api'
-import { IUser,IUserCreate,IUserLogin } from '../interfaces/user'
+import { IUser,IUserCreate,IUserLogin,IUserEdit } from '../interfaces/user'
 
 const userServices = {
     login : async ({ email,password }: IUserLogin)=> {
@@ -30,7 +30,8 @@ const userServices = {
         const newUsers = this.get()
         return newUsers
     },
-    edit: async function (data : IUserCreate){
+    edit: async function (data : IUserEdit){
+        console.log(data)
        await Api.patch('/user/edit',data)
        const newUsers = this.get()
        return newUsers

@@ -13,7 +13,6 @@ const EditProfile = () => {
     setRegistry,
     name,
     email,
-    password,
     registry
   } = useUser()
   const [user,setUser] = React.useState<IUser>()
@@ -30,7 +29,7 @@ const EditProfile = () => {
   const data = {
     name,
     email,
-    password,
+    id,
     registry
   }
   React.useEffect(()=>{

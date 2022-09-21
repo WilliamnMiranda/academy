@@ -8,6 +8,8 @@ const recordServices = {
     },
     post : async function( record : ICreateRecord){
       await Api.post('/record/create',record)
+      const newRecords = this.get()
+      return newRecords
     },
     delete : async function(recordId : string){
        try{

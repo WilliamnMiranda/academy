@@ -15,6 +15,7 @@ const userSlice = createSlice({
     initialState : initialState,
     reducers : {
         login (state,{payload}){
+            console.log(payload.token)
            localStorage.setItem('token',payload.token)
             return{
                 ...state,

@@ -9,7 +9,7 @@ export const Actions = styled.td`
     padding:5px;
     div{
         display: flex;
-        justify-content: space-between;
+        gap:5px;
         span{
             cursor: pointer;
             font-size: 1.4em;

@@ -27,7 +27,7 @@ const Register = ({ status, setOption }: IPropsComponents) => {
           <label>Registro</label>
           <input type='text' />
         </ContainerInput>
-        <ButtonLogin> LOGIN </ButtonLogin>
+        <ButtonLogin> REGISTRAR </ButtonLogin>
       </FormLogin>
       <CreateAccount onClick={()=> setOption('login')}> Ja tem um conta ? LOGIN </CreateAccount>
     </ContainerLogin>

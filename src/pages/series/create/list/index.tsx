@@ -8,19 +8,22 @@ import recordServices  from '../../../../services/records'
 import { ICreateRecord } from '../../../../interfaces/record'
 import { ModalContext } from '../../../../contexts/modal'
 import { useNavigate } from 'react-router-dom'
+import { RecordContext } from '../../../../contexts/records'
 interface IProps {
   exercises: IExercise[]
   userID : string
 }
 const List = ({ exercises, userID }: IProps) => {
   const { setStatus } = React.useContext(ModalContext); 
+  const { setRecords } = React.useContext(RecordContext); 
   const navigate = useNavigate()
-  const createRecord = () => {
+  const createRecord = async () => {
     const data:ICreateRecord = {
       userID, 
       exercises,
     }
-    recordServices.post(data)
+    const newRecords = await recordServices.post(data)
+    setRecords([...newRecords])
     setStatus(false)
     navigate('/records')
   }

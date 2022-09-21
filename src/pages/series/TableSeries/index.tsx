@@ -1,3 +1,4 @@
+import React from 'react'
 import moment from 'moment';
 import { Status, Actions } from './style'
 import Table from '../../../components/Table'
@@ -6,7 +7,7 @@ import Line from '../../../components/LineTable'
 import { IRecord } from '../../../interfaces/record'
 import { AiFillEdit, AiFillDelete, AiFillEye } from "react-icons/ai";
 import recordServices from '../../../services/records'
-import useRecord from '../../../hooks/useRecords'
+import { RecordContext } from '../../../contexts/records';
 const style = (status: boolean) => {
     return {
         width: '10px',
@@ -25,7 +26,7 @@ const icon = (status: boolean) => {
 }
 
 const TableUsers = () => {
-    const { records, setRecords } = useRecord()
+    const { records, setRecords } = React.useContext(RecordContext)
     const deleteRecord = async (id: string) => {
         const newRecords = await recordServices.delete(id)
         setRecords([...newRecords])
@@ -46,7 +47,7 @@ const TableUsers = () => {
                 </HeaderTable>
                 <tbody>
                     {
-                        records.map((item: IRecord) => {
+                       records.map((item: IRecord) => {
                             return (
                                 <>
                                     <Line>
